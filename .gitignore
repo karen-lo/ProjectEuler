@@ -1,4 +1,4 @@
-/recover.txt
+recover.txt
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -59,3 +59,13 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+
+#IDE project files
+.classpath
+.project
+
+.settings/
+
+target/
+
