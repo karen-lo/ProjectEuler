@@ -34,34 +34,5 @@ public class Problem4 {
 		}
 		
 		return true;
-		
-//		String stringNum = String.valueOf(number);
-//		char first = stringNum.charAt(0);
-//		char last = stringNum.charAt(stringNum.length());
-//
-//		if (first == last) {
-//			char second = stringNum.charAt(1);
-//			char secondToLast = stringNum.charAt(stringNum.length() - 1);
-//
-//			if (second == secondToLast) {
-//				
-//				if (stringNum.length() > 5) {
-//					char third = stringNum.charAt(2);
-//					char thirdToLast = stringNum.charAt(stringNum.length() - 2);
-//
-//					if (third == thirdToLast) {
-//						return true;
-//					} else {
-//						return false;
-//					}
-//				}
-//				
-//				return true;
-//			} else {
-//				return false;
-//			}
-//		} else {
-//			return false;
-//		}
 	}
 }
