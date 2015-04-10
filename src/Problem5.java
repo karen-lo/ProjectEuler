@@ -6,38 +6,55 @@ import java.util.*;
 
 public class Problem5 {
 	public static void main (String[] args){
-		int factorRange = 20;
-		int[] factors = new int[factorRange];
-		int answer;
+		//int factorRange = 20;
+		//int[] factors = new int[factorRange];
+		ArrayList<Integer> factors = new ArrayList<Integer>();
+		//int answer;
 		
-		for (int i=0, j=1; i<factors.length; i++, j++) {
-			factors[i] = j;
+		for (int i=0, j=1; i<factors.size(); i++, j++) {
+			factors.add(j);
 		}
 		
-		ArrayList<Integer> revisedFactors = new ArrayList<Integer>(findPrimes(factors));
-		answer = multiple(revisedFactors);
-		System.out.println("Asnwer: " + answer);
+		findPrimes(factors);
+		
+		//ArrayList<Integer> revisedFactors = new ArrayList<Integer>(findPrimes(factors));
+//		answer = multiple(revisedFactors);
+//		System.out.println("Asnwer: " + answer);
 	}
 	
 	//filters list of factors for primes
-	public static ArrayList<Integer> findPrimes(int[] factors){
-		ArrayList<Integer> primeFactors = new ArrayList<Integer>();
-		int maxFac = factors[factors.length-1];
-		System.out.println(maxFac);
-		primeFactors.add(1);
+	public static void findPrimes(ArrayList<Integer> factors){
+//		ArrayList<Integer> primeFactors = new ArrayList<Integer>();
+//		int maxFac = factors[factors.length-1];
+//		System.out.println(maxFac);
+//		primeFactors.add(1);
+//		primeFactors.add(2);
 		
-		
-		for (int i=2; i <= factors[factors.length-1]; i++){
-			int length = primeFactors.size(); //bads
-			
-			for (int j=0; j<length; i++) {
-				
-				if (primeFactors.get(j)%i != 0) {
-					primeFactors.add(i);
-					System.out.println(i);
+		//try subtractive
+		for (int i=1; i<factors.size(); i++) {
+			for(int j=factors.get(factors.size()-1); j>=3; j--) {
+				if (j%i == 0) {
+					factors.remove(j);
 				}
-				
 			}
+		}
+		
+		for (int i=0; i<factors.size(); i++) {
+			System.out.println("list" + i + ": " + factors.get(i));
+		}
+		
+		
+//		for (int i=3; i <= factors[factors.length-1]; i++){
+//			int length = primeFactors.size(); //bads
+//			
+//			for (int j=1; j<length; j++) {
+//				
+//				if (i%primeFactors.get(j) == 0) {
+//					//primeFactors.add(i);
+//					System.out.println(i);
+//				}
+//				
+//			}
 			
 //			Integer x = new Integer(i);
 //			if (!primeFactors.contains(x)) {
@@ -56,12 +73,10 @@ public class Problem5 {
 //			}
 		}
 		
-		for (int i=0; i<primeFactors.size(); i++) {
-			System.out.println("list" + i + ": " + primeFactors.get(i));
-		}
+
 		
-		return primeFactors;	
-	}
+//		return primeFactors;	
+//	}
 	
 	//finds the smallest multiple divisible by list of prime factors
 	public static int multiple(ArrayList<Integer> factors) {
