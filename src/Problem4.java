@@ -4,37 +4,37 @@
 
 public class Problem4 {
 	public static void main(String[] args) {
-//		int x;
-//		int y;
+		int x;
+		int y;
 		int product;
 		boolean palindrome;
 		int largestP = 0;
 
-//		for (x = 100; x <= 999; x++) {
-//			for (y = 100; y <= 999; y++) {
-//				product = x * y;
-//				//String num = String.valueOf(product);
-//				palindrome = checkPalindrome(product);
-//				
-//				if (palindrome == true && product>largestP){
-//					largestP = product;
-//				}
-//			}
-//		}
-		
-		for(int x=100; x<=999; x++) {
-			for(int y=100; y<=999; y++) {
-				product = x*y;
-				palindrome = newPalindromeCheck(product);
-				if (palindrome == true) {
-					System.out.println("product: " + product);
-				}
+		for (x = 100; x <= 999; x++) {
+			for (y = 100; y <= 999; y++) {
+				product = x * y;
+				//String num = String.valueOf(product);
+				palindrome = checkPalindrome(product);
 				
 				if (palindrome == true && product>largestP){
 					largestP = product;
 				}
 			}
 		}
+		
+//		for(int x=100; x<=999; x++) {
+//			for(int y=100; y<=999; y++) {
+//				product = x*y;
+//				palindrome = newPalindromeCheck(product);
+//				if (palindrome == true) {
+//					System.out.println("product: " + product);
+//				}
+//				
+//				if (palindrome == true && product>largestP){
+//					largestP = product;
+//				}
+//			}
+//		}
 		
 		System.out.println(largestP);
 	}
