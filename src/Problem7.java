@@ -31,7 +31,6 @@ public class Problem7 {
 				}
 				if(num%primes.get(iterator) != 0) {
 					iterator++;
-					//System.out.println("iterator" + iterator);
 				} 
 
 			}
@@ -41,10 +40,6 @@ public class Problem7 {
 			}
 			origNum+=2; //skips the even numbers
 		}
-		
-//		for(int i=0; i<primes.size(); i++) {
-//			System.out.println(i + "th number: " + primes.get(i));
-//		}
 		
 		return (int)primes.get(index-1);
 	}
