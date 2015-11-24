@@ -1,7 +1,7 @@
-Project Euler solutions written in Java by Karen Lo.
+#Project Euler solutions written in Java by Karen Lo.
 
-Project Euler Finished Problems:
-- Problem 1: Multiples of 3 and 5
+##*Project Euler Finished Problems:*
+###- Problem 1: Multiples of 3 and 5
 
 	Finds the sum of all the multiples of 3 or 5 below 1000 using a for loop and a nested if, else if loop.
 
