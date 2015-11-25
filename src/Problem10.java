@@ -1,20 +1,24 @@
 import java.util.ArrayList;
 
-/* Project Euler Problem 7: 10001st Prime
- * Finds the 10001st prime number.
+/* In progress...
+ * Project Euler Problem 10: Summation of Primes 
+ * Finds the sum of all the primes below two million.
  */
 
-public class Problem7 {
+public class Problem10 {
 	public static void main(String[] args) {
-		int index = 10001;
-		int nthPrime;
+		int index = 2000000;
 		
-		nthPrime = findPrime(index);
-		System.out.println(nthPrime);
+		ArrayList<Integer> primes = new ArrayList<Integer>();
+		primes = findPrime(index);
+		
+		long sum = findSum(primes);
+		
+		System.out.printf("The sum is %d\n.", sum);
 		
 	}
 	
-	public static int findPrime(int index) {
+	public static ArrayList<Integer> findPrime(int index) {
 		int origNum = 5;
 		
 		ArrayList<Integer> primes = new ArrayList<Integer>();
@@ -41,6 +45,17 @@ public class Problem7 {
 			origNum+=2; //skips the even numbers
 		}
 		
-		return (int)primes.get(index-1);
+		return primes;
+	}
+	
+	public static long findSum(ArrayList<Integer> primes) {
+		int sum = 0;
+		
+		for(int i=0; i<primes.size(); i++) {
+			int val = primes.get(i);
+			sum += val;
+		}
+		
+		return sum;
 	}
 }

@@ -27,3 +27,6 @@ Finds the thirteen adjacent digits in the Problem8num.txt file that have the gre
 	
 #####- Problem 9: Special Pythagorean Triplet
 Finds the one Pythagorean triplet where a+b+c=100 and returns the product of abc.
+
+#####- Problem 10: Summation of Primes
+Finds the sum of all the primes below two million.
