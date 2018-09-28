@@ -3,17 +3,24 @@
  */
 
 public class Problem1 {
-	public static void main (String[] args){
-		int sum = 0;
-		
-		for (int i = 1; i<1000; i++){
-			if (i%3 == 0){
-				sum = i + sum;
-			} else if (i%5 == 0){
-				sum = i + sum;
-			}
-		}
-		System.out.println(sum);
+	public static void main(String[] args) {
+		int factors[] = {3, 5};
+		int max = 1000;
+		System.out.println(sumMultiples(max, factors));
 	}
 
+	public static int sumMultiples(int max, int[] factors) {
+		int sum = 0;
+
+		for(int i=1; i<max; i++) {
+			for(int x : factors) {
+				if(i%x == 0) {
+				    sum += i;
+				    break;
+                }
+            }
+		}
+
+		return sum;
+	}
 }

@@ -3,23 +3,19 @@
  */
 
 public class Problem2 {
-	public static void main (String[] args){
-		int sum = 2;
-		int x = 1;
-		int y = 2;
-		int z;
-		
-		while (y < 4000000){
-			z = x + y;
-			
-			x = y;
-			y = z;
-			
-			if (z%2 == 0){
-				sum = sum + z;
-			}
+	public static void main(String[] args) {
+		int max = 4000000;
+		System.out.println(evenFibSum(max));
+	}
+
+	public static int evenFibSum(int max) {
+		int a = 1, b = 2, c, sum = 2;
+
+		while((c = a + b) < max) {
+			if(c%2 == 0) sum += c;
+			a = b;
+			b = c;
 		}
-		
-		System.out.println(sum);
+		return sum;
 	}
 }
