@@ -2,39 +2,28 @@
  * Finds the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
  */
 
+import java.util.stream.IntStream;
+
 public class Problem6 {
 	public static void main(String[] args) {
-		int num = 100;
-		double[] naturalNums = new double[num];
-		
-		for(int i=0, j=1; i<naturalNums.length; i++, j++) {
-			naturalNums[i] = j;
-		}
-		
-		int totalSum = sumOfSquares(naturalNums);
-		int totalSq = squareOfSum(naturalNums);
-		
-		System.out.println("Difference: " + (totalSq-totalSum));
+		int[] firstXNatNum = IntStream.rangeClosed(1, 100).toArray();
+		int diff = Math.abs((sumOfSquares(firstXNatNum) - squareOfSum(firstXNatNum)));
+		System.out.println(diff);
 	}
-	
-	public static int sumOfSquares(double[] nums) {
+
+	public static int sumOfSquares(int[] numList) {
 		int sum = 0;
-		
-		for(int i=0; i<nums.length; i++) {
-			int sq = (int)Math.pow(nums[i], 2);
-			sum = sum + sq;
+		for(int i=0; i<numList.length; i++) {
+			sum += (numList[i]*numList[i]);
 		}
-		
 		return sum;
 	}
-	
-	public static int squareOfSum(double[] nums) {
-		double sum = 0;
-		
-		for(int i=0; i<nums.length; i++) {
-			sum = sum + nums[i];
+
+	public static int squareOfSum(int[] numList) {
+		int sum = 0;
+		for(int i=0; i<numList.length; i++) {
+			sum += numList[i];
 		}
-		
-		return (int)Math.pow(sum, 2);
+		return sum*sum;
 	}
 }
