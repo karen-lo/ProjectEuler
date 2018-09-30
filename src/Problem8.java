@@ -1,80 +1,75 @@
 /* Project Euler Problem 8: Largest Product In a Series
- * Finds the largest product of n consecutive numbers in a given series .
+ * Finds the largest product of n consecutive numbers in a given d-digit number .
  */
+
 import java.util.*;
 import java.io.*;
 
 public class Problem8 {
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(System.getProperty("user.dir"));
-		int numOfConseqFac = 13;
-		long answer;
-		String file = new String("Problem8num.txt");
-		Scanner scanner;
-		
-		//try to make scanner
-		try {
-			scanner = new Scanner(new File(file));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			throw e;
-		}
-		
-		String num = scanner.next();
-		
-		answer = greatestProduct(numOfConseqFac, num);
-		
-		System.out.printf("The answer is %d.", answer);
-		scanner.close();
-	}
-	
-	public static long greatestProduct(int numOfFactors, String num) {
-		long product = 1;
-		long maxProd = 1;
-		int iterator = 0;
-		int count = 0;
-		ArrayList<Integer> arraylist = new ArrayList<Integer>();	
-		
-		//place each individual number into the arraylist
-		for(int x=0; x<num.length(); x++) {
-			
-			int temp = Integer.parseInt(num.substring(x, x+1));
-			arraylist.add(temp);
-		}
-		
+	    String filename = "Problem8num.txt";
+        int digit = 1000;
+        int lengthOfSeries = 13;
 
-		while(iterator < arraylist.size()) {
-			
-			while(count < numOfFactors && iterator < arraylist.size()) {
-				
-				if(arraylist.get(iterator) == 0) {
-					iterator++; 
-					count = 0;
-					product = 1;
-				} else {
-					product *= arraylist.get(iterator);
-					count++;
-					iterator++;
-				}
-			}
-			System.out.printf("The new product is %d.\n", product);
-			
-			if(product > maxProd) {
-				maxProd = product;
-				System.out.printf("The max product is %d.\n", maxProd);
-			}
-			
-			product = 1;
-			count = 0;
-			
-			//reset back to the second integer for the next set of factors
-			if(iterator < arraylist.size()-numOfFactors){
-				iterator-=(numOfFactors-1);
-			} else {
-				break;
-			}
-		}
-		
-		return maxProd;
-	}
+	    String numS;
+	    try {
+	        Scanner scanner = new Scanner(new File(filename));
+            numS = scanner.next();
+        } catch (FileNotFoundException e) {
+	        e.printStackTrace();
+	        throw e;
+        }
+
+        int[] num = new int[digit];
+        for(int i=0; i<numS.length(); i++) {
+            num[i] = Character.getNumericValue(numS.charAt(i));
+        }
+
+        System.out.println(largestProdInSeries(num, lengthOfSeries));
+    }
+
+    public static long largestProdInSeries(int[] num, int lengthOfSeries) {
+	    int front = lengthOfSeries - 1, back = 0;
+	    long largestP = 0;
+
+	    // find the first n numbers with no 0s
+	    int pad = 0;
+	    for(int i=0; i<lengthOfSeries; i++) {
+	        if(num[i + pad] == 0) {
+	            back += i;
+	            front += i;
+	            pad += i;
+	            i = 0;
+            }
+        }
+
+	    while(front <= num.length-1) {
+            long newP = multList(back, front, num);
+            if(newP > largestP) largestP = newP;
+
+            if(num[++front] == 0) {
+                pad = 0;
+                while(pad < lengthOfSeries) {
+                    if(front >= num.length-1) return largestP;
+                    if(num[++front] == 0) {
+                        pad = 0;
+                    } else {
+                        pad++;
+                    }
+                }
+                back = front - (lengthOfSeries-1);
+            } else {
+                back++;
+            }
+        }
+        return largestP;
+    }
+
+    public static long multList(int startIncl, int endIncl, int[] numlist) {
+	    long product = 1;
+	    for(int i=startIncl; i<= endIncl; i++) {
+	        product *= numlist[i];
+        }
+        return product;
+    }
 }
