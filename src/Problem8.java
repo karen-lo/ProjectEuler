@@ -7,7 +7,7 @@ import java.io.*;
 
 public class Problem8 {
 	public static void main(String[] args) throws FileNotFoundException {
-	    String filename = "Problem8num.txt";
+	    String filename = "data/Problem8num.txt";
         int digit = 1000;
         int lengthOfSeries = 13;
 
