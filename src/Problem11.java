@@ -44,40 +44,6 @@ public class Problem11 {
         return Math.max(Math.max(diagLR, diagRL), Math.max(vertical, horizontal));
     }
 
-//    public static int largestDirectionalProd(int[][] grid, int adjacencies, boolean xDir, int startIndex) {
-//        int largestP = 0;
-//        int limit;
-////        limit = (xDir) ? grid.length :
-//
-//        for(int i=0; i<grid.length; i++) {
-//            int pad = 0, prod = 1;
-//
-//            int frontX = grid[0].length-1, frontY = i, backX = grid[0].length-1, backY = i;
-//
-//            while(frontX >= 0 && frontY < grid.length) {
-//                if(grid[frontX][frontY] == 0) {
-//                    pad = 0;
-//                    backX = --frontX;
-//                    backY = ++frontY;
-//                    prod = 1;
-//
-//                } else {
-//                    prod *= grid[frontX][frontY];
-//                    frontX--;
-//                    frontY++;
-//                    if(pad == adjacencies-1) {
-//                        if(prod > largestP) largestP = prod;
-//                        prod /= grid[backX][backY];
-//                        backX--;
-//                        backY++;
-//                    } else {
-//                        pad++;
-//                    }
-//                }
-//            }
-//        }
-//    }
-
     public static int largestProdHorizontal(int[][] grid, int adjacencies) {
         int largestP = 0;
 
@@ -247,5 +213,4 @@ public class Problem11 {
         }
         return largestP;
     }
-
 }

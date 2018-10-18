@@ -21,5 +21,7 @@ Finds the thirteen adjacent digits in the Problem8num.txt file that have the gre
 Finds the one Pythagorean triplet where a+b+c=100 and returns the product of abc.
 #### - Problem 10: Summation of Primes
 Finds the sum of all the primes below two million.
-#### - Peoblem 11: Largest Product in a Grid
+#### - Problem 11: Largest Product in a Grid
 Finds the largest product of n adjacent numbers in a grid in the same direction (up, down, left, right, or diagonally).
+#### - Problem 12: Highly Divisible Triangular Number
+Finds the first triangular number with over n divisors.
