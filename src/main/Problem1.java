@@ -1,5 +1,6 @@
 /* Project Euler Problem 1: Multiples of 3 and 5
  * Finds the sum of all the multiples of 3 or 5 below 1000.
+ * Karen Lo © 2015
  */
 
 public class Problem1 {

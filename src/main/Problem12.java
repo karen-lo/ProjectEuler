@@ -1,6 +1,7 @@
 /* In Progress
  * Project Euler Problem 12: Highly Divisible Triangular Number
  * Finds first triangular number with over n divisors.
+ * Karen Lo © 2015
  */
 
 public class Problem12 {

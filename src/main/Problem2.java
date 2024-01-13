@@ -1,5 +1,6 @@
 /* Project Euler Problem 2: Even Fibonacci Numbers
  * Finds the sum of all the even-numbered terms in the Fibonacci sequence.
+ * Karen Lo © 2015
  */
 
 public class Problem2 {

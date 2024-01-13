@@ -1,5 +1,6 @@
 /* Project Euler Problem 9: Special Pythagorean Triplet 
  * Finds the one Pythagorean triplet where a+b+c=1000 and then returns the product of abc.
+ * Karen Lo © 2015
  */
 
 public class Problem9 {

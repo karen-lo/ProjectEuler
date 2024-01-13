@@ -1,5 +1,6 @@
 /* Project Euler Problem 10: Summation of Primes
  * Finds the sum of all the primes below two million.
+ * Karen Lo © 2015
  */
 
 import java.util.Arrays;
