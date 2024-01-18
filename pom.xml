@@ -2,12 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>karen-lo</groupId>
+    <artifactId>ProjectEuler</artifactId>
+    <version>1</version>
+    <url>https://github.com/karen-lo/ProjectEuler</url>
     <properties>
         <maven.compiler.source>${javaVersion}</maven.compiler.source>
         <maven.compiler.target>${javaVersion}</maven.compiler.target>
     </properties>
-    <modelVersion>4.0.0</modelVersion>
-    <url>https://github.com/OstlerDev/Howler</url>
+        <modelVersion>4.0.0</modelVersion>
         <dependencies>
             <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
