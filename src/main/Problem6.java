@@ -1,5 +1,6 @@
 /* Project Euler Problem 6: Sum Square Difference
  * Finds the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+ * Karen Lo © 2015
  */
 
 import java.util.stream.IntStream;

@@ -1,5 +1,6 @@
 /* Project Euler Problem 3: Largest Prime Factor
  * Finds the largest prime factor of the 600851475143.
+ * Karen Lo © 2015
  */
 public class Problem3 {
 	public static void main(String[] args) {

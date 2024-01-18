@@ -1,5 +1,6 @@
 /* Project Euler Problem 7: 10001st Prime
  * Finds the 10001st prime number.
+ * Karen Lo © 2015
  */
 
 import java.util.ArrayList;

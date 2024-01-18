@@ -5,6 +5,7 @@
  * Find the list of prime numbers amongst the factors.
  * Also notice that even though a number is evenly divisible by 2, it may not be evenly divisible by 4.
  * But a number evenly divisible by 4 will be evenly divisible by 2.
+ * Karen Lo © 2015
  */
 
 import java.util.ArrayList;

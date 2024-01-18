@@ -1,6 +1,7 @@
 /* Project Euler Problem 11: Largest Product In A Grid
  * Finds the greatest product of n adjacent numbers in the same direction
  * (up, down, left, right, or diagonally) in the grid.
+ * Karen Lo © 2018
  */
 
 import java.io.File;

@@ -1,5 +1,6 @@
 /* Project Euler Problem 4: Largest Palindrome Product
  * Finds the largest palindrome product of two 3-digit numbers.
+ * Karen Lo © 2015
  */
 
 public class Problem4 {

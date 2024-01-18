@@ -1,5 +1,6 @@
 /* Project Euler Problem 8: Largest Product In a Series
  * Finds the largest product of n consecutive numbers in a given d-digit number .
+ * Karen Lo © 2015
  */
 
 import java.util.*;
