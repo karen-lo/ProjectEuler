@@ -5,7 +5,7 @@
 
 public class Problem12 {
     public static void main(String[] args) {
-        int minDivisors = 500;
+        int minDivisors = Integer.parseInt(args[0]);
         System.out.println(triangleNumFinder(minDivisors));
     }
 
